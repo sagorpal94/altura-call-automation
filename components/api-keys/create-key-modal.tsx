@@ -58,15 +58,14 @@ export function CreateKeyModal({type, trigger, onSubmit}: CreateKeyModalProps) {
                 {trigger}
             </DialogTrigger>
 
+            {/* ১. max-h-[90vh] এবং flex flex-col যোগ করা হয়েছে */}
             <DialogContent
-                // Key: This prevents closing on backdrop click
                 onInteractOutside={handleInteractOutside}
-                // Optional: Prevent closing on Escape key if desired
                 onEscapeKeyDown={handleInteractOutside}
-                className="font-[Space_Grotesk] !max-w-5xl w-[calc(100%-2rem)] px-3 py-6 rounded-md border-[#DFE1E7] shadow-lg gap-0 [&>button]:hidden">
+                className="font-[Space_Grotesk] !max-w-5xl w-[calc(100%-2rem)] max-h-[90vh] p-0 rounded-md border-[#DFE1E7] shadow-lg flex flex-col gap-0 [&>button]:hidden">
 
-                {/* --- DYNAMIC HEADER --- */}
-                <div className="flex items-center justify-between flex-wrap mb-3">
+                {/* --- DYNAMIC HEADER (Fixed) --- */}
+                <div className="flex items-center justify-between flex-wrap px-6 py-4 border-b">
                     <DialogTitle className="text-[22px] font-semibold text-neutral-900 dark:text-muted-foreground">
                         Create {isPrivate ? "Private" : "Public"} Key
                     </DialogTitle>
@@ -76,37 +75,42 @@ export function CreateKeyModal({type, trigger, onSubmit}: CreateKeyModalProps) {
                     </DialogClose>
                 </div>
 
+                {/* ২. Form-কে flex-1 এবং overflow-hidden করে ফুটার আলাদা করা হয়েছে */}
                 <Form {...form}>
-                    <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
+                    <form
+                        onSubmit={form.handleSubmit(handleSubmit)}
+                        className="flex flex-col flex-1 overflow-hidden"
+                    >
 
-                        {/* --- INPUT AREA --- */}
-                        <Card className="border-[#DFE1E7] py-0 shadow-none rounded-md ">
-                            <CardContent className="p-3">
-                                <FormField
-                                    control={form.control}
-                                    name="name"
-                                    render={({field}) => (
-                                        <FormItem className="space-y-1">
-                                            <FormLabel
-                                                className="text-lg font-bold text-black dark:text-muted-foreground">
-                                                Key Internal Name
-                                            </FormLabel>
-                                            <FormControl>
-                                                <Input
-                                                    placeholder={isPrivate ? "E.g Inbound Sales" : "E.g. Public Widget Key"}
-                                                    {...field}
-                                                    className="w-full h-10 border-yellow-400 focus-visible:ring-0 text-lg text-zinc-600 placeholder:text-zinc-400 bg-zinc-50/30"
-                                                />
-                                            </FormControl>
-                                            <FormMessage/>
-                                        </FormItem>
-                                    )}
-                                />
-                            </CardContent>
-                        </Card>
+                        {/* --- SCROLLABLE INPUT AREA --- */}
+                        <div className="flex-1 overflow-y-auto p-6">
+                            <Card className="border-[#DFE1E7] py-0 shadow-none rounded-md ">
+                                <CardContent className="p-3">
+                                    <FormField
+                                        control={form.control}
+                                        name="name"
+                                        render={({field}) => (
+                                            <FormItem className="space-y-1">
+                                                <FormLabel className="text-lg font-bold text-black dark:text-muted-foreground">
+                                                    Key Internal Name
+                                                </FormLabel>
+                                                <FormControl>
+                                                    <Input
+                                                        placeholder={isPrivate ? "E.g Inbound Sales" : "E.g. Public Widget Key"}
+                                                        {...field}
+                                                        className="w-full h-10 border-yellow-400 focus-visible:ring-0 text-lg text-zinc-600 placeholder:text-zinc-400 bg-zinc-50/30"
+                                                    />
+                                                </FormControl>
+                                                <FormMessage/>
+                                            </FormItem>
+                                        )}
+                                    />
+                                </CardContent>
+                            </Card>
+                        </div>
 
-                        {/* --- FOOTER BUTTONS --- */}
-                        <div className="flex  sm:justify-end items-center flex-wrap gap-4">
+                        {/* --- FIXED FOOTER BUTTONS --- */}
+                        <div className="flex sm:justify-end items-center flex-wrap gap-4 px-6 py-4 border-t border-zinc-100 sticky bottom-0 z-30">
                             <DialogClose asChild>
                                 <Button
                                     type="button"
@@ -121,8 +125,7 @@ export function CreateKeyModal({type, trigger, onSubmit}: CreateKeyModalProps) {
                                 type="submit"
                                 className="w-full sm:w-auto h-10 px-6 bg-[#FCEC1A] hover:bg-[#FCEC1A] text-black dark:text-muted font-bold rounded-md gap-3 shadow-none transition-all"
                             >
-                                <div
-                                    className="flex h-6 w-6 items-center justify-center rounded-sm border border-black">
+                                <div className="flex h-6 w-6 items-center justify-center rounded-sm border border-black">
                                     <Plus className="h-4 w-4 stroke-[3px]"/>
                                 </div>
                                 Create Key

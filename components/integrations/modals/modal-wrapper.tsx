@@ -1,7 +1,8 @@
 "use client"
+
 import React from "react"
-import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog"
-import { Button } from "@/components/ui/button"
+import {Dialog, DialogContent, DialogTitle} from "@/components/ui/dialog"
+import {Button} from "@/components/ui/button"
 import {Icons} from "@/components/icons";
 
 interface WrapperProps {
@@ -12,7 +13,7 @@ interface WrapperProps {
     formId: string;
 }
 
-export const ModalWrapper = ({ open, setOpen, title, children, formId }: WrapperProps) => (
+export const ModalWrapper = ({open, setOpen, title, children, formId}: WrapperProps) => (
     <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent
             onInteractOutside={(e) => e.preventDefault()}
@@ -21,12 +22,18 @@ export const ModalWrapper = ({ open, setOpen, title, children, formId }: Wrapper
         >
 
             {/* HEADER (Fixed) */}
-            <div className="flex items-center justify-between px-6 py-4 border-b border-zinc-100 bg-white sticky top-0 z-30">
+            <div
+                className="flex items-center justify-between px-6 py-4 border-b border-zinc-100 bg-white sticky top-0 z-30">
                 <DialogTitle className="text-xl font-bold text-zinc-900 tracking-tight">{title}</DialogTitle>
-                <button onClick={() => setOpen(false)}
-                        className="cursor-pointer w-8 h-8 flex items-center justify-center  hover:bg-yellow-50">
-                    <Icons.modalClose size={20} strokeWidth={2.5}/>
-                </button>
+
+                <Icons.modalClose
+                    onClick={() => setOpen(false)}
+                    className="h-8 w-8 stroke-[2.5px] text-[#BBAE00] cursor-pointer"
+                />
+                {/*<button onClick={() => setOpen(false)}*/}
+                {/*        className="cursor-pointer w-8 h-8 flex items-center justify-center  text-yellow-50">*/}
+                {/*    <Icons.modalClose size={20} strokeWidth={2.5} fill="text-yellow-500"/>*/}
+                {/*</button>*/}
             </div>
 
             {/* BODY (Scrollable) */}
@@ -47,10 +54,12 @@ export const ModalWrapper = ({ open, setOpen, title, children, formId }: Wrapper
             {/* FOOTER (Fixed) */}
             <div className="px-6 py-4 border-t border-zinc-100 bg-white sticky bottom-0 z-30">
                 <div className="flex flex-row justify-end gap-3">
-                    <Button type="submit" form={formId} className="h-11 px-8 bg-[#FDF027] hover:bg-[#e6d920] text-zinc-900 font-bold text-sm rounded-lg shadow-none transition-all">
+                    <Button type="submit" form={formId}
+                            className="h-11 px-8 bg-[#FDF027] hover:bg-[#e6d920] text-zinc-900 font-bold text-sm rounded-lg shadow-none transition-all">
                         Establish Connection
                     </Button>
-                    <Button type="button" variant="outline" onClick={() => setOpen(false)} className="h-11 px-10 border-[#FF453A]/40 text-[#FF453A] font-medium text-sm rounded-lg hover:bg-red-50 hover:text-red-600 shadow-none transition-all">
+                    <Button type="button" variant="outline" onClick={() => setOpen(false)}
+                            className="h-11 px-10 border-[#FF453A]/40 text-[#FF453A] font-medium text-sm rounded-lg hover:bg-red-50 hover:text-red-600 shadow-none transition-all">
                         Cancel
                     </Button>
                 </div>

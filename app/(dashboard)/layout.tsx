@@ -18,7 +18,9 @@ export default async function DashboardLayout({children}: { children: React.Reac
             <SidebarInset className="overflow-y-auto overflow-x-hidden">
                 <Header/>
                 <div className="flex flex-1 flex-col gap-4 p-4">
-                    {children}
+                    <div className="animate-in fade-in slide-in-from-bottom-4 duration-500">
+                        {children}
+                    </div>
                 </div>
             </SidebarInset>
         </SidebarProvider>

@@ -46,7 +46,7 @@ const CardPreviewModal = ({open, setOpen}: CardPreviewModalProps) => {
         <Dialog open={open} onOpenChange={setOpen}>
 
             <DialogContent
-                className="font-[Space_Grotesk] !max-w-[1166px] w-[calc(100%-2rem)] h-[calc(100vh-6rem)] px-4 py-[30px] rounded-md border-[#DFE1E7] shadow-lg gap-0 [&>button]:hidden"
+                className="font-[Space_Grotesk] !max-w-[1166px] w-[calc(100%-2rem)] max-h-[90vh] px-4 py-[30px] rounded-md border-[#DFE1E7] shadow-lg gap-0 [&>button]:hidden"
                 onInteractOutside={(e) => e.preventDefault()}
                 onEscapeKeyDown={(e) => e.preventDefault()}
             >
