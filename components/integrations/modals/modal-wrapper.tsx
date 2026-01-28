@@ -24,7 +24,7 @@ export const ModalWrapper = ({ open, setOpen, title, children, formId }: Wrapper
             <div className="flex items-center justify-between px-6 py-4 border-b border-zinc-100 bg-white sticky top-0 z-30">
                 <DialogTitle className="text-xl font-bold text-zinc-900 tracking-tight">{title}</DialogTitle>
                 <button onClick={() => setOpen(false)}
-                        className="cursor-pointer w-8 h-8 flex items-center justify-center border border-yellow-400 rounded-md text-yellow-500 hover:bg-yellow-50">
+                        className="cursor-pointer w-8 h-8 flex items-center justify-center  hover:bg-yellow-50">
                     <Icons.modalClose size={20} strokeWidth={2.5}/>
                 </button>
             </div>
