@@ -800,7 +800,7 @@ export default function CreateToolModal({isOpen, setIsOpen}: { isOpen: boolean; 
                                             <div className="space-y-4">
                                                 <div className="flex justify-between items-center">
                                                     <h4 className="text-[15px] font-bold">Conditions</h4>
-                                                    <Trash2 className="w-4 h-4 text-zinc-300 cursor-pointer" />
+                                                    {/*<Trash2 className="w-4 h-4 text-zinc-300 cursor-pointer" />*/}
                                                 </div>
 
                                                 {/* Condition Row */}
@@ -825,7 +825,7 @@ export default function CreateToolModal({isOpen, setIsOpen}: { isOpen: boolean; 
                                                         />
                                                         <ChevronDown className="absolute right-3 top-3.5 w-4 h-4 text-zinc-400" />
                                                     </div>
-                                                    <Trash2 className="w-4 h-4 text-zinc-300 cursor-pointer" />
+                                                    {/*<Trash2 className="w-4 h-4 text-zinc-300 cursor-pointer" />*/}
                                                 </div>
                                             </div>
                                         </div>
