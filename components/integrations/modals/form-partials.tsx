@@ -134,7 +134,7 @@ export const CustomCredentialFields = ({ control }: any) => (
         <div className="flex justify-end items-center gap-3 flex-col items-end">
             <span className="text-sm font-bold text-zinc-900 dark:text-muted-foreground">Authentication Type</span>
             <FormField control={control} name="authType" render={({ field }) => (
-                <FormItem className="w-[180px]">
+                <FormItem>
                     <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl><SelectTrigger className="h-10 border-yellow-400 bg-white shadow-none"><SelectValue /></SelectTrigger></FormControl>
                         <SelectContent>
