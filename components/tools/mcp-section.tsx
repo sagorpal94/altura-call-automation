@@ -277,7 +277,7 @@ export default function McpSection({ form }: { form: UseFormReturn<ToolFormValue
                                     </label>
                                 </RadioGroup>
                             </FormControl>
-                            <FormDescription className="text-xs text-zinc-500">
+                            <FormDescription className="text-xs text-zinc-500 ">
                                 Choose the communication protocol for MCP server connections. Streamable HTTP (SHTTP) is recommended for most use cases.
                             </FormDescription>
                             <FormMessage />
