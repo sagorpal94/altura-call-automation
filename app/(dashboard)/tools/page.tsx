@@ -5,24 +5,28 @@ const toolsData = [
     {
         id: "1",
         title: "Knowledge Query",
+        toolType: "Query",
         category: "Query",
         description: "Search the knowledge base for specific information during a call.",
     },
     {
         id: "2",
         title: "Hang Up",
+        toolType: "end-call",
         category: "End call",
         description: "Gracefully terminate the call after finishing the objective.",
     },
     {
         id: "3",
         title: "G-Calendar",
+        toolType: "G-Calendar",
         category: "Google calendar",
         description: "Sync events and check availability in Google Calendar.",
     },
     {
         id: "4",
         title: "Slack Alert",
+        toolType:"Slack-Alert",
         category: "Slack",
         description: "Send a notification to a Slack channel when a call ends.",
     },

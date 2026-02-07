@@ -11,6 +11,23 @@ export const toolFormSchema = z.object({
     description: z.string().max(1000).optional(),
     serverUrl: z.string().url("Invalid URL").or(z.string().min(1)),
     timeout: z.coerce.number().min(1).max(300).default(20),
+
+    requestUrl: z.string().url("Invalid URL").or(z.string().min(1, "URL is required")),
+    httpMethod: z.enum(["GET", "POST", "PUT", "PATCH", "DELETE"]).default("GET"),
+    credential: z.object({
+        mode: z.string().default("no-auth"),
+    }).default({ mode: "no-auth" }),
+
+    // --- Add Google Sheets Fields ---
+    spreadsheetId: z.string().optional().or(z.literal("")),
+    range: z.string().optional().or(z.literal("")),
+
+    maxDurationSeconds: z.coerce.number().min(1).max(600).default(120),
+    beep: z.boolean().default(true),
+    transcription: z.boolean().default(true),
+    reason: z.string().optional().or(z.literal("")),
+    mcpProtocol: z.enum(["SHTTP", "SSE"]).default("SHTTP"),
+
     authType: z.string().default("no-auth"),
     // dynamic fields examples
     properties: z.array(z.any()).default([]),
