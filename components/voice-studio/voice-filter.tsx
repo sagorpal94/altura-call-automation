@@ -4,6 +4,7 @@ import {Copy, Plus, RefreshCw, Search} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import Image from "next/image";
+import {CloneVoiceModal} from "@/components/voice-studio/clone-voice-modal";
 
 const VoiceFilter = () => {
     return (
@@ -29,13 +30,14 @@ const VoiceFilter = () => {
 
                 {/* Action Buttons */}
                 <div className="flex items-center gap-3 ">
-                    <Button
-                        variant="ghost"
-                        className="text-zinc-400 border border-[#999999] px-4 py-2 dark:text-zinc-500 gap-2 font-medium hover:bg-zinc-50 dark:hover:bg-zinc-900"
-                    >
-                        Clone
-                        <Image src="/images/clone.png" alt="clone" width={16} height={16}/>
-                    </Button>
+                    <CloneVoiceModal />
+                        {/*<Button*/}
+                    {/*    variant="ghost"*/}
+                    {/*    className="text-zinc-400 border border-[#999999] px-4 py-2 dark:text-zinc-500 gap-2 font-medium hover:bg-zinc-50 dark:hover:bg-zinc-900"*/}
+                    {/*>*/}
+                    {/*    Clone*/}
+                    {/*    <Image src="/images/clone.png" alt="clone" width={16} height={16}/>*/}
+                    {/*</Button>*/}
                     {/*<Button variant="outline"*/}
                     {/*        className="text-[#999999] border border-[#999999] px-4 py-2 dark:text-zinc-500 gap-2 h-10 font-medium hover:bg-zinc-50 dark:hover:bg-zinc-900"*/}
                     {/*>*/}
