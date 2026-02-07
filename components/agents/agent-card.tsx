@@ -60,7 +60,7 @@ export default function AgentCard({
 
             <div className="space-y-3 mt-auto">
                 <Button onClick={() => setShowCallModal(true)}
-                        className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-semibold shadow-none border-0">
+                        className="w-full bg-[#fcec1a] hover:bg-yellow-500 text-black font-semibold shadow-none border-0">
                     Call Agent
                 </Button>
                 <Button onClick={() => setShowChatModal(true)} variant="outline"

@@ -45,7 +45,19 @@ const stats = [
         trendColor: "text-[#F11818]"
     }
 ]
-export default function AnalyticsPage() {
+export default async function AnalyticsPage({
+                                          searchParams,
+                                      }: {
+    searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+}) {
+    // URL থেকে বর্তমান preset এবং range এর ভ্যালুগুলো নিন
+    const params = await searchParams;
+    const preset = (params.preset as string) || "6M";
+    const from = params.from as string;
+    const to = params.to as string;
+
+    // এখানে আপনি চাইলে API call করতে পারেন এই ডেটগুলো দিয়ে
+    // const data = await getAnalyticsData(from, to, preset);
     return (
         <div className="flex flex-col gap-5 font-[Space_Grotesk]">
 
@@ -59,7 +71,11 @@ export default function AnalyticsPage() {
                 </p>
             </div>
 
-            <FilterSection/>
+            <FilterSection
+                defaultPreset={preset}
+                defaultFrom={from}
+                defaultTo={to}
+            />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 {stats.map((stat, index) => (
