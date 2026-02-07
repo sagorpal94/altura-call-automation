@@ -1,11 +1,6 @@
 "use client"
 
 import * as React from "react"
-import {
-    AudioWaveform,
-    Command,
-    GalleryVerticalEnd,
-} from "lucide-react"
 
 import {NavProjects} from "@/components/nav-projects"
 import {NavUser} from "@/components/nav-user"
@@ -60,7 +55,7 @@ export function AppSidebar({...props}: React.ComponentProps<typeof Sidebar>) {
             <SidebarFooter>
                 <NavUser user={data.user}/>
             </SidebarFooter>
-            <SidebarRail/>
+            {/*<SidebarRail/>*/}
         </Sidebar>
     )
 }

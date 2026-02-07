@@ -69,11 +69,13 @@ const Header = () => {
             // className="px-4 flex justify-between sticky top-0 h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12"
         >
             <div className="flex items-center gap-2 ">
-                <SidebarTrigger className="-ml-1"/>
-                <Separator
-                    orientation="vertical"
-                    className="mr-2 data-[orientation=vertical]:h-4"
-                />
+                <div className="flex items-center gap-1 md:hidden">
+                    <SidebarTrigger className="-ml-1"/>
+                    <Separator
+                        orientation="vertical"
+                        className="mr-2 data-[orientation=vertical]:h-4"
+                    />
+                </div>
                 <Icons.headerHome/>
                 <Separator
                     orientation="vertical"
@@ -120,7 +122,8 @@ const Header = () => {
                             {/* Header */}
                             <div className="px-4 py-3 border-b flex justify-between items-center bg-slate-50">
                                 <h4 className="font-bold text-sm text-slate-900">Notifications</h4>
-                                <button className="cursor-pointer text-[10px] uppercase font-black text-blue-500 hover:underline transition-all">
+                                <button
+                                    className="cursor-pointer text-[10px] uppercase font-black text-blue-500 hover:underline transition-all">
                                     Mark all read
                                 </button>
                             </div>
