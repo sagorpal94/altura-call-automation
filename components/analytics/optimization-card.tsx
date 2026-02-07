@@ -15,20 +15,20 @@ export default function OptimizationCard() {
                         <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#b6b000] text-white">
                             <AudioWaveform className="h-6 w-6"/>
                         </div>
-                        <h2 className="text-[32px] font-bold text-neutral-900 dark:text-muted-foreground tracking-tight">
+                        <h2 className="text-xl font-bold text-neutral-900 dark:text-muted-foreground tracking-tight">
                             Optimization Suggestions
                         </h2>
                     </div>
 
                     {/* "Updated Just Now" Badge */}
                     <div
-                        className="hidden sm:block px-[17px] py-2 rounded-sm border border-[#BBAE00] bg-[#FEF8AB] text-[16px] font-semibold text-[#BBAE00]">
+                        className="hidden sm:block px-[17px] py-2 rounded-sm border border-[#BBAE00] bg-[#FEF8AB] text-sm font-semibold text-[#BBAE00]">
                         Updated Just Now
                     </div>
                 </div>
 
                 {/* --- MAIN INSIGHT TEXT --- */}
-                <p className="text-[22px] font-medium text-zinc-900 dark:text-muted-foreground leading-relaxed">
+                <p className="text-lg font-medium text-zinc-900 dark:text-muted-foreground leading-relaxed">
                     Based on the 4,529 interactions analyzed in this period, we&apos;ve detected a{" "}
                     <span className="text-[#FF383C]">15% increase</span> in mentions related to{" "}
                     <span className="text-[#BBAE00]">&quot;API Rate Limits&quot;</span>.
@@ -38,9 +38,9 @@ export default function OptimizationCard() {
                 <div className="rounded-md border border-[#DFE1E7] bg-zinc-50/30 p-4 space-y-2">
                     <div className="flex items-center gap-2 text-[#BBAE00]">
                         <Sparkles className="h-5 w-5"/>
-                        <h4 className="text-2xl font-bold">Action Recommendation</h4>
+                        <h4 className="text-xl font-bold">Action Recommendation</h4>
                     </div>
-                    <p className="text-[#0E121B] dark:text-muted-foreground text-xl leading-snug">
+                    <p className="text-[#0E121B] dark:text-muted-foreground text-base leading-snug">
                         Consider reviewing your enterprise tier throughput settings or updating your agent instructions
                         to handle temporary delays with specific troubleshooting steps.
                     </p>

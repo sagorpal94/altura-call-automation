@@ -1916,5 +1916,51 @@ export const Icons = {
         </svg>
     ),
 
+    imageIcon:({className, ...props}: LucideProps) => (
+        <svg className={className} {...props} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.08325 9.99967C2.08325 6.26772 2.08325 4.40175 3.24262 3.24237C4.40199 2.08301 6.26797 2.08301 9.99992 2.08301C13.7318 2.08301 15.5978 2.08301 16.7573 3.24237C17.9166 4.40175 17.9166 6.26772 17.9166 9.99967C17.9166 13.7316 17.9166 15.5976 16.7573 16.757C15.5978 17.9163 13.7318 17.9163 9.99992 17.9163C6.26797 17.9163 4.40199 17.9163 3.24262 16.757C2.08325 15.5976 2.08325 13.7316 2.08325 9.99967Z" stroke="#99A0AE" strokeWidth="1.25"/>
+            <path d="M13.75 7.5C14.4404 7.5 15 6.94036 15 6.25C15 5.55964 14.4404 5 13.75 5C13.0596 5 12.5 5.55964 12.5 6.25C12.5 6.94036 13.0596 7.5 13.75 7.5Z" stroke="#99A0AE" strokeWidth="1.25"/>
+            <path d="M13.3333 18.3336C12.8171 16.4794 11.6121 14.8187 9.89708 13.6121C8.04801 12.3111 5.72636 11.6225 3.34641 11.6692C3.06382 11.6686 2.78147 11.6776 2.5 11.6962" stroke="#99A0AE" strokeWidth="1.25" strokeLinejoin="round"/>
+            <path d="M10.8333 14.9996C12.2512 13.8941 13.7787 13.327 15.3218 13.3331C16.1968 13.3321 17.0676 13.5176 17.9166 13.8844" stroke="#99A0AE" strokeWidth="1.25" strokeLinejoin="round"/>
+        </svg>
+    ),
+
+    voiceIcon:({className, ...props}: LucideProps)=>(
+        <svg className={className} {...props} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M2.08325 9.99967C2.08325 6.26772 2.08325 4.40175 3.24262 3.24237C4.40199 2.08301 6.26797 2.08301 9.99992 2.08301C13.7318 2.08301 15.5978 2.08301 16.7573 3.24237C17.9166 4.40175 17.9166 6.26772 17.9166 9.99967C17.9166 13.7316 17.9166 15.5976 16.7573 16.757C15.5978 17.9163 13.7318 17.9163 9.99992 17.9163C6.26797 17.9163 4.40199 17.9163 3.24262 16.757C2.08325 15.5976 2.08325 13.7316 2.08325 9.99967Z" stroke="#99A0AE" strokeWidth="1.25"/>
+            <path d="M10 6.66699V13.3337" stroke="#99A0AE" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M7.5 8.33301V11.6663" stroke="#99A0AE" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M5 9.16699V10.8337" stroke="#99A0AE" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M12.5 8.33301V11.6663" stroke="#99A0AE" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M15 9.16699V10.8337" stroke="#99A0AE" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+    ),
+
+    sendIcon:({className, ...props}: LucideProps)=>(
+        <svg className={className} {...props} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.9977 2.11848C17.6082 1.69899 16.9974 1.54187 16.4139 1.48563C15.8008 1.42653 15.0666 1.46583 14.276 1.56953C12.6906 1.77748 10.7751 2.25886 8.93509 2.85114C7.09393 3.4438 5.29921 4.15688 3.95514 4.84007C3.28621 5.18007 2.70604 5.52411 2.28426 5.85456C2.07425 6.0191 1.88261 6.19634 1.73845 6.38498C1.60095 6.56492 1.45629 6.82092 1.45827 7.12953C1.4635 7.93959 2.01516 8.51209 2.60265 8.89634C3.20229 9.28859 3.98324 9.58418 4.7596 9.81567C5.54429 10.0497 6.36947 10.231 7.07886 10.378C7.12536 10.3876 7.21828 10.4068 7.33215 10.4303C7.76095 10.5189 7.97535 10.5633 8.1769 10.5029C8.37842 10.4426 8.53342 10.2877 8.84326 9.97776L11.9107 6.91042C12.2361 6.58498 12.7638 6.58498 13.0892 6.91042C13.4146 7.23586 13.4146 7.7635 13.0892 8.08893L10.2287 10.9494C9.91276 11.2653 9.75484 11.4233 9.69509 11.6283C9.63526 11.8333 9.68351 12.0508 9.77992 12.4861C10.1536 14.1733 10.4781 15.5676 10.8018 16.5056C10.9909 17.0534 11.2037 17.5277 11.4731 17.8774C11.7543 18.2424 12.1368 18.5182 12.6402 18.5404C12.9536 18.5543 13.2142 18.4112 13.3928 18.2783C13.5812 18.1385 13.7583 17.9508 13.9225 17.7458C14.2525 17.3334 14.5993 16.7629 14.9443 16.1036C15.6376 14.7786 16.3718 13.002 16.993 11.1743C17.6139 9.34743 18.1313 7.44184 18.3806 5.85809C18.5049 5.06826 18.5664 4.33473 18.5323 3.72032C18.4998 3.13764 18.3757 2.52556 17.9977 2.11848Z" fill="#FCEC1A"/>
+        </svg>
+    ),
+    revenueIcon: (props: LucideProps) => (
+        <svg {...props} className={`w-5 h-5 ${props.className || ""}`} fill="none" viewBox="0 0 24 24"
+             stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+    ),
+    successRateIcon: (props: LucideProps) => (
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+        </svg>
+    ),
+    usageIcon: (props: LucideProps) => (
+        <svg {...props} className={`w-5 h-5 ${props.className || ""}`} fill="none" viewBox="0 0 24 24"
+             stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+    ),
+
 
 }

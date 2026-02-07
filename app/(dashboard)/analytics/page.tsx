@@ -51,10 +51,10 @@ export default function AnalyticsPage() {
 
             {/* --- HEADER SECTION --- */}
             <div className="space-y-1">
-                <h1 className="text-4xl md:text-[40px] font-bold text-[#161616] dark:text-muted-foreground flex items-center gap-2">
-                    Hola, Carlos <span className="animate-bounce">👋</span>
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
+                    Hola, Carlos <span className="text-3xl">👋🏼</span>
                 </h1>
-                <p className="text-[#161616] dark:text-muted-foreground text-lg">
+                <p className="mt-2 max-w-2xl text-lg text-gray-500 dark:text-gray-400">
                     Deep insights into your call performance, customer sentiment, and ROI metrics.
                 </p>
             </div>
@@ -69,7 +69,7 @@ export default function AnalyticsPage() {
                             {/* Card Header: Label + Icon */}
                             <div className="flex justify-between items-start">
                                 <span
-                                    className={`text-lg font-bold  tracking-wider ${stat.labelColor ? stat.labelColor : "text-black dark:text-muted-foreground"}`}>
+                                    className={`text-lg  tracking-wider ${stat.labelColor ? stat.labelColor : "text-black dark:text-muted-foreground"}`}>
                                   {stat.label}
                                 </span>
                                 <div className="border border-zinc-200 rounded-lg p-1.5">
@@ -79,7 +79,7 @@ export default function AnalyticsPage() {
 
                             {/* Card Body: Value + Trend */}
                             <div className="space-y-1">
-                                <h2 className="text-[32px] font-bold text-black dark:text-muted-foreground tracking-tight">
+                                <h2 className="text-3xl font-bold text-black dark:text-muted-foreground tracking-tight">
                                     {stat.value}
                                 </h2>
                                 {stat.change && (

@@ -7,10 +7,10 @@ export default function Page() {
 
             {/* --- HEADER SECTION --- */}
             <div className="space-y-1">
-                <h1 className="text-4xl md:text-[40px] font-bold text-[#161616] dark:text-muted-foreground flex items-center gap-2">
-                    Hola, Carlos <span className="animate-bounce">👋</span>
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
+                    Hola, Carlos <span className="text-3xl">👋🏼</span>
                 </h1>
-                <p className="text-[#161616] dark:text-muted-foreground text-lg">
+                <p className="mt-2 max-w-2xl text-lg text-gray-500 dark:text-gray-400">
                     Manage your credentials for programatic access to the Altura fleet and web integration.
                 </p>
             </div>

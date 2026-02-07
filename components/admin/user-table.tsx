@@ -3,8 +3,10 @@ import {cn} from "@/lib/utils"
 import {Ban, CircleSlash, MoreHorizontal} from "lucide-react";
 import {Button} from "@/components/ui/button";
 import {Icons} from "@/components/icons";
+import Link from "next/link";
 
 const users = Array.from({length: 5}).map((_, i) => ({
+    id: i + 1,
     name: "Bob Vance",
     company: "Acme Inc • Account Profile",
     financials: "$1,624.00",
@@ -73,8 +75,11 @@ export function UserTable() {
                                     <div className="flex items-center justify-center gap-3">
                                         <CircleSlash
                                             className="h-4 w-4 text-zinc-400 cursor-pointer rotate-45 stroke-black dark:stroke-white"/>
-                                        <Button variant="outline" size="sm"
-                                                className="h-7 text-xs font-bold rounded-md p-4 border-[#DFE1E7]">View</Button>
+                                        <Link
+                                            href={`/admin/${user.id}`}>
+                                            <Button variant="outline" size="sm"
+                                                    className="h-7 text-xs font-bold rounded-md p-4 border-[#DFE1E7]">View</Button>
+                                        </Link>
                                     </div>
                                 </TableCell>
                             </TableRow>

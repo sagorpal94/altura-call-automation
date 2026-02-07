@@ -81,10 +81,10 @@ export default function UserManagementPage() {
         <div className="flex flex-col gap-5 transition-colors duration-300 ">
 
             <div className="space-y-1">
-                <h1 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-zinc-50 flex items-center gap-2">
-                    Hola, Carlos <span className="animate-bounce">👋</span>
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
+                    Hola, Carlos <span className="text-3xl">👋🏼</span>
                 </h1>
-                <p className="text-zinc-500 dark:text-zinc-400 text-lg max-w-3xl leading-tight">
+                <p className="mt-2 max-w-2xl text-lg text-gray-500 dark:text-gray-400">
                     Let&#39;s Create New Agent
                 </p>
             </div>

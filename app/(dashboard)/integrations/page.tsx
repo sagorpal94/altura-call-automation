@@ -130,10 +130,10 @@ export default function Page() {
         <div className="min-h-screen font-[Inter,sans-serif]">
             {/* Header Section */}
             <div className="max-w-7xl mx-auto mb-12">
-                <h1 className="text-3xl md:text-4xl font-bold mb-2 flex items-center gap-2">
-                    Hola, Carlos <span className="animate-bounce">👋</span>
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
+                    Hola, Carlos <span className="text-3xl">👋🏼</span>
                 </h1>
-                <p className="text-zinc-500 max-w-2xl leading-relaxed">
+                <p className="mt-2 max-w-2xl text-lg text-gray-500 dark:text-gray-400">
                     Provision local and toll-free numbers from global carriers and link them to your AI agents in one
                     click.
                 </p>

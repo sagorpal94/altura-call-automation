@@ -40,8 +40,8 @@ export default function Page() {
     return (
         <div className="flex flex-col gap-5 transition-colors duration-300 ">
             <div className="space-y-1">
-                <h1 className="text-4xl md:text-5xl font-bold text-zinc-900 dark:text-zinc-50 flex items-center gap-2">
-                    Hola, Carlos <span className="animate-bounce">👋</span>
+                <h1 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white flex items-center gap-2">
+                    Hola, Carlos <span className="text-3xl">👋🏼</span>
                 </h1>
             </div>
 
