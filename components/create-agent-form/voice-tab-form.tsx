@@ -2,7 +2,7 @@ import React from 'react';
 import {useFormContext} from "react-hook-form"
 import {TrendingUp} from "lucide-react"
 
-import {FormControl, FormField, FormItem, FormLabel} from "@/components/ui/form"
+import {FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form"
 import {Input} from "@/components/ui/input"
 import {Slider} from "@/components/ui/slider"
 import {Checkbox} from "@/components/ui/checkbox"
@@ -17,6 +17,7 @@ const TrendValue = () => (
 
 const VoiceTabForm = () => {
     const form = useFormContext()
+    const isManualVoiceChecked = form.watch("manualVoiceId")
 
     return (
         <div className="animate-in fade-in duration-300 space-y-4">
@@ -72,19 +73,42 @@ const VoiceTabForm = () => {
                         />
                     </div>
 
-                    <FormField
-                        control={form.control}
-                        name="manualVoiceId"
-                        render={({field}) => (
-                            <FormItem className="flex flex-row items-center space-x-2 space-y-0">
-                                <FormControl>
-                                    <Checkbox checked={field.value} onCheckedChange={field.onChange}
-                                              className="data-[state=checked]:bg-zinc-800 rounded-[4px]"/>
-                                </FormControl>
-                                <FormLabel className="text-sm font-bold leading-none">Add Voice ID Manually</FormLabel>
-                            </FormItem>
+                    <div className="space-y-4 grid grid-cols-2 gap-8 items-baseline">
+                        <FormField
+                            control={form.control}
+                            name="manualVoiceId"
+                            render={({field}) => (
+                                <FormItem className="flex flex-row items-center space-x-2 space-y-0">
+                                    <FormControl>
+                                        <Checkbox checked={field.value} onCheckedChange={field.onChange}
+                                                  className="data-[state=checked]:bg-zinc-800 rounded-[4px]"/>
+                                    </FormControl>
+                                    <FormLabel className="text-sm font-bold leading-none">Add Voice ID
+                                        Manually</FormLabel>
+                                </FormItem>
+                            )}
+                        />
+                        {/* কন্ডিশনাল ইনপুট ফিল্ড */}
+                        {isManualVoiceChecked && (
+                            <FormField
+                                control={form.control}
+                                name="voiceId"
+                                render={({ field }) => (
+                                    <FormItem className="animate-in slide-in-from-top-2 duration-200">
+                                        <FormLabel className="font-bold text-sm">Voice ID</FormLabel>
+                                        <FormControl>
+                                            <Input
+                                                {...field}
+                                                placeholder="Enter Voice ID"
+                                                className="border-yellow-400/30 focus-visible:ring-yellow-400"
+                                            />
+                                        </FormControl>
+                                        <FormMessage />
+                                    </FormItem>
+                                )}
+                            />
                         )}
-                    />
+                    </div>
                 </CardContent>
             </Card>
 
@@ -225,7 +249,8 @@ const VoiceTabForm = () => {
                             render={({field}) => (
                                 <FormItem className="space-y-4">
                                     <div className="flex items-center justify-between">
-                                        <FormLabel className="font-bold text-sm text-zinc-900 dark:text-muted-foreground">{param.label}</FormLabel>
+                                        <FormLabel
+                                            className="font-bold text-sm text-zinc-900 dark:text-muted-foreground">{param.label}</FormLabel>
                                         <TrendValue/>
                                     </div>
                                     <FormControl>

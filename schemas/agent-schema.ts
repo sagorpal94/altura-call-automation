@@ -21,6 +21,7 @@ export const agentFormSchema = z.object({
     voiceProvider: z.string().min(1, "Required"),
     voiceSelection: z.string().min(1, "Required"),
     manualVoiceId: z.boolean().default(false),
+    voiceId: z.string().optional(),
     model: z.string().min(1, "Required"),
     backgroundSound: z.string().optional(),
     backgroundSoundUrl: z.string().url("Invalid URL").optional().or(z.literal("")),

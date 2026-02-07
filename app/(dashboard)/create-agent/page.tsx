@@ -53,6 +53,7 @@ export default function Page() {
             voiceProvider: "",
             voiceSelection: "",
             manualVoiceId: false,
+            voiceId:"",
             model: "zephyr-01",
             backgroundSound: "None",
             backgroundSoundUrl: "",
